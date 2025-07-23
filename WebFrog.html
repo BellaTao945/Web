@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>员工工作环境分类问卷</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 150px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      color: #004080;
+      margin-bottom: 40px;
+    }
+
+    .question, .category {
+      display: none;
+      margin-bottom: 30px;
+    }
+
+    .question p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .category {
+      font-weight: bold;
+      font-size: 18px;
+      color: #2e7d32;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-secondary {
+      background-color: #6c757d;
+    }
+
+    .btn-secondary:hover {
+      background-color: #5a6268;
+    }
+
+    .restart-btn {
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .btn {
+        width: 100%;
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://img.mianfeiwendang.com/pic/5f652b918d2d8e95474f9c48/1-810-jpg_6-1080-0-0-1080.jpg" alt="Alfa Laval Logo" class="logo" />
+    <h1>员工工作环境分类问卷</h1>
+
+    <!-- Question 1 -->
+    <div class="question" id="q1">
+      <p><strong>Q1：</strong>您的日常工作是否仅在阿法拉伐办公室或仅出差到客户办公楼（非生产）区域？</p>
+      <button class="btn" onclick="show('cat1')">是</button>
+      <button class="btn" onclick="show('q2')">否</button>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question" id="q2">
+      <p><strong>Q2：</strong>您是否会出入客户生产现场区域？</p>
+      <button class="btn" onclick="show('q3')">是</button>
+      <button class="btn" onclick="show('q4')">否</button>
+      <button class="btn btn-secondary" onclick="show('q1')">← 返回上一题</button>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question" id="q3">
+      <p><strong>Q3：</strong>您是否在客户生产现场自己动手操作或自己动手修理产品？</p>
+      <button class="btn" onclick="show('cat2')">是</button>
+      <button class="btn" onclick="show('cat3')">否</button>
+      <button class="btn btn-secondary" onclick="show('q2')">← 返回上一题</button>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question" id="q4">
+      <p><strong>Q4：</strong>您的主要工作地点是在阿法拉伐自己的工厂或车间么？</p>
+      <button class="btn" onclick="show('cat4')">是</button>
+      <button class="btn" onclick="show('contact')">否</button>
+      <button class="btn btn-secondary" onclick="show('q2')">← 返回上一题</button>
+    </div>
+
+    <!-- Categories -->
+    <div class="category" id="cat1">
+      类别1：仅在阿法或客户办公楼区域工作的人员<br>
+      <a href="https://www.ke82.com/view/472s84538u0.html" target="_blank">点击查看类别1相关信息</a><br>
+      <button class="btn restart-btn" onclick="show('q1')">重新开始问卷</button>
+    </div>
+
+    <div class="category" id="cat2">
+      类别2：去客户现场，且直接操作/接触产品的工程师或技术人员<br>
+      <a href="http://www.banyuetan.org/chcontent/sz/szkj/2017224/221273.shtml" target="_blank">点击查看类别2培训资料</a><br>
+      <button class="btn restart-btn" onclick="show('q1')">重新开始问卷</button>
+    </div>
+
+    <div class="category" id="cat3">
+      类别3：去现场，但不直接操作产品的人员（如销售）<br>
+      <a href="https://pet-grid.com/%e5%b0%8f%e4%b8%91%e8%9b%99/" target="_blank">点击查看类别3安全指南</a><br>
+      <button class="btn restart-btn" onclick="show('q1')">重新开始问卷</button>
+    </div>
+
+    <div class="category" id="cat4">
+      类别4：在阿法拉伐的车间工厂工作的员工<br>
+      <a href="https://www.163.com/dy/article/JHTOP6AC05567TPZ.html" target="_blank">点击查看类别4安全须知</a><br>
+      <button class="btn restart-btn" onclick="show('q1')">重新开始问卷</button>
+    </div>
+
+    <div class="category" id="contact">
+      请返回Q1复查问题，或联系安全员。<br>
+      <a href="mailto:Xiaofeng.Bian@alfalaval.com">点击联系安全员</a><br>
+      <button class="btn btn-secondary" onclick="show('q4')">← 返回上一题</button>
+      <button class="btn restart-btn" onclick="show('q1')">返回Q1</button>
+    </div>
+  </div>
+
+  <script>
+    function show(id) {
+      document.querySelectorAll('.question, .category').forEach(el => el.style.display = 'none');
+      const target = document.getElementById(id);
+      if (target) {
+        target.style.display = 'block';
+        window.scrollTo(0, 0);
+      }
+    }
+
+    show('q1');
+  </script>
+</body>
+</html>
